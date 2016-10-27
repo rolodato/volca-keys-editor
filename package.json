@@ -1,0 +1,22 @@
+{
+  "name": "volca-keys-editor",
+  "version": "1.0.0",
+  "description": "Web-based editor for Korg Volca Keys",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tslint src/*.ts && typings install && concurrently \"tsc -w --strictNullChecks\" \"lite-server -c bs-config.js\""
+  },
+  "repository": {
+    "url": "git@github.com:rolodato/volca-keys-editor.git",
+    "type": "git"
+  },
+  "author": "Rodrigo López Dato <rolodato@rolodato.com>",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "concurrently": "^3.1.0",
+    "lite-server": "^2.2.2",
+    "tslint": "^3.15.1",
+    "typescript": "^2.0.6",
+    "typings": "^1.4.0"
+  }
+}

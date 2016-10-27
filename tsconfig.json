@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "allowJs": false,
+    "target": "es6",
+    "module": "commonjs"
+  },
+  "include": [
+    "./src/**/*"
+  ],
+  "files": [
+    "typings/index.d.ts"
+  ]
+}

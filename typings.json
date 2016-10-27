@@ -1,0 +1,5 @@
+{
+  "globalDependencies": {
+    "webmidi": "registry:dt/webmidi#0.0.0+20160608102331"
+  }
+}
