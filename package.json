@@ -4,7 +4,7 @@
   "description": "Web-based editor for Korg Volca Keys",
   "main": "index.js",
   "scripts": {
-    "dev": "tslint src/*.ts && typings install && concurrently \"tsc -w --strictNullChecks\" \"lite-server -c bs-config.js\""
+    "dev": "tslint src/*.ts && typings install && concurrently \"webpack --watch\" \"lite-server -c bs-config.js\""
   },
   "repository": {
     "url": "git@github.com:rolodato/volca-keys-editor.git",
@@ -15,8 +15,14 @@
   "devDependencies": {
     "concurrently": "^3.1.0",
     "lite-server": "^2.2.2",
+    "ts-loader": "^0.9.5",
     "tslint": "^3.15.1",
     "typescript": "^2.0.6",
-    "typings": "^1.4.0"
+    "typings": "^1.4.0",
+    "webpack": "^1.13.3"
+  },
+  "dependencies": {
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
   }
 }

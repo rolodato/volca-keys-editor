@@ -3,7 +3,8 @@
     "outDir": "./dist",
     "allowJs": false,
     "target": "es6",
-    "module": "commonjs"
+    "module": "commonjs",
+    "jsx": "react"
   },
   "include": [
     "./src/**/*"
