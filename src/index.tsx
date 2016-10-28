@@ -75,7 +75,8 @@ ReactDOM.render(
         cc="50" />
       <Parameter
         name="Sustain"
-        cc="51" />
+        cc="51"
+        initialValue="127" />
     </fieldset>
     <fieldset>
       <legend>Delay</legend>

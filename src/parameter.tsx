@@ -32,14 +32,15 @@ export class Parameter extends React.Component<Props, State> {
     }
 
     render() {
+        const isDisabled = !this.props.cc;
         return (
             <div>
                 <label>{this.props.name}</label>
                 <input type="range"
                     max="127"
-                    value={this.state.value}
+                    value={isDisabled ? 63 : this.state.value}
                     step={Math.ceil(127 / this.props.range)}
-                    disabled={!this.props.cc}
+                    disabled={isDisabled}
                     onChange={this.handleChange} />
             </div>
         );
