@@ -16,7 +16,6 @@ function onMIDISuccess(midi: WebMidi.MIDIAccess) {
   if (midi.outputs.size === 0) {
     alert("No MIDI output interfaces detected");
   }
-  const test = <h1>yo</h1>;
 }
 
 ReactDOM.render(
@@ -25,67 +24,65 @@ ReactDOM.render(
       <legend>VCO</legend>
       <Parameter
         name="Voice"
-        cc="40"
-        range="7" />
+        cc={40}
+        range={7} />
       <Parameter
         name="Octave"
-        cc="41"
-        range="6" />
+        cc={41}
+        range={6} />
       <Parameter
         name="Detune"
-        cc="42" />
+        cc={42} />
       <Parameter
         name="Portamento"
-        cc="5" />
+        cc={5} />
       <Parameter
         name="EG INT"
-        cc="43" />
+        cc={43} />
     </fieldset>
     <fieldset>
       <legend>VCF</legend>
       <Parameter
         name="Cutoff"
-        cc="44"
-        initialValue="127" />
-      <Parameter
-        name="Peak" />
+        cc={44}
+        initialValue={127} />
       <Parameter
         name="EG INT"
-        cc="45" />
+        cc={45} />
     </fieldset>
     <fieldset>
       <legend>LFO</legend>
       <Parameter
         name="Rate"
-        cc="46" />
+        cc={46} />
       <Parameter
         name="Pitch INT"
-        cc="47" />
+        cc={47} />
       <Parameter
         name="Cutoff INT"
-        cc="48" />
+        cc={48} />
     </fieldset>
     <fieldset>
       <legend>EG</legend>
       <Parameter
         name="Attack"
-        cc="49" />
+        cc={49} />
       <Parameter
         name="Decay/Release"
-        cc="50" />
+        cc={50} />
       <Parameter
         name="Sustain"
-        cc="51"
-        initialValue="127" />
+        cc={51}
+        initialValue={127} />
     </fieldset>
     <fieldset>
       <legend>Delay</legend>
       <Parameter
         name="Time"
-        cc="52" />
+        cc={52} />
       <Parameter
         name="Feedback"
-        cc="53" />
+        cc={53} />
     </fieldset>
   </div>,
   document.getElementById("root")!
