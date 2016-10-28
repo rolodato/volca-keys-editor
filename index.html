@@ -8,6 +8,63 @@
     <script src="dist/index.js"></script>
   </head>
   <body>
-    <div id="root"></div>
+    <fieldset>
+      <legend>VCO</legend>
+      <label for="voice">Voice mode</label>
+      <input type="range" max="127" value="0" step="19" id="voice">
+
+      <label for="octave">Octave</label>
+      <input type="range" max="127" value="0" step="22" id="octave">
+
+      <label for="detune">Detune</label>
+      <input type="range" max="127" value="0" id="detune">
+
+      <label for="portamento">Portamento</label>
+      <input type="range" max="127" value="0" id="portamento">
+
+      <label for="vcoegint">EG INT</label>
+      <input type="range" max="127" value="0" id="vcoegint">
+    </fieldset>
+    <fieldset>
+      <legend>VCF</legend>
+      <label for="cutoff">Cutoff</label>
+      <input type="range" max="127" value="127" id="cutoff">
+
+      <label for="peak">Peak</label>
+      <input type="range" disabled="true" id="peak">
+
+      <label for="vcfegint">EG INT</label>
+      <input type="range" max="127" value="0" id="vcfegint">
+    </fieldset>
+    <fieldset>
+      <legend>LFO</legend>
+      <label for="rate">Rate</label>
+      <input type="range" max="127" value="0" id="rate">
+
+      <label for="pitchint">Pitch INT</label>
+      <input type="range" max="127" value="0" id="pitchint">
+
+      <label for="cutoffint">Cutoff INT</label>
+      <input type="range" max="127" value="0" id="cutoffint">
+    </fieldset>
+    <fieldset>
+      <legend>EG</legend>
+      <label for="attack">Attack</label>
+      <input type="range" max="127" value="0" id="rate">
+
+      <label for="decayrelease">Decay/Release</label>
+      <input type="range" max="127" value="0" id="decayrelease">
+
+      <label for="sustain">Sustain</label>
+      <input type="range" max="127" value="127" id="sustain">
+    </fieldset>
+    <fieldset>
+      <legend>Delay</legend>
+      <label for="time">Time</label>
+      <input type="range" max="127" value="0" id="time">
+
+      <label for="feedback">Feedback</label>
+      <input type="range" max="127" value="0" id="feedback">
+    </fieldset>
   </body>
 </html>
