@@ -3,13 +3,13 @@ import { MidiDevice } from "./MidiDevice";
 import { Parameter } from "./Parameter";
 
 export interface Props {
-    parameter: Parameter,
-    midi: MidiDevice
+    parameter: Parameter;
+    midi: MidiDevice;
 }
 
 interface State {
-    value?: number,
-    midi: MidiDevice
+    value?: number;
+    midi: MidiDevice;
 }
 
 export class MidiParameter extends React.Component<Props, State> {

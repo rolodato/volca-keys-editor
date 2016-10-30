@@ -3,13 +3,13 @@ import { Parameter } from "./Parameter";
 import { MidiParameter } from "./MidiParameter";
 
 interface Props {
-    midi: WebMidi.MIDIAccess
-    parameters: Parameter[]
+    midi: WebMidi.MIDIAccess;
+    parameters: Parameter[];
 }
 
 interface State {
-    midiOut: WebMidi.MIDIOutput,
-    channel: number
+    midiOut: WebMidi.MIDIOutput;
+    channel: number;
 }
 
 export class MidiDevice extends React.Component<Props, State> {
@@ -56,7 +56,7 @@ export class MidiDevice extends React.Component<Props, State> {
                 <button onClick={this.initialize}>Initialize</button>
                 <select name="channel" onChange={this.changeChannel}>
                     {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16].map(c => {
-                        return <option value={c} key={c}>Channel {c}</option>
+                        return <option value={c} key={c}>Channel {c}</option>;
                     })}
                 </select>
                 <select name="device" onChange={this.changeDevice}>
@@ -68,10 +68,10 @@ export class MidiDevice extends React.Component<Props, State> {
                         midi={this}
                         key={p.cc}
                         ref={(param) => { this.midiParams.push(param); } }
-                    />;
+                        />;
                 })}
             </div>
-        )
+        );
     }
 
     public parameterChanged(param: MidiParameter): void {
