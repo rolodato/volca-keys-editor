@@ -4,7 +4,8 @@
   "description": "Web-based editor for Korg Volca Keys",
   "main": "index.js",
   "scripts": {
-    "dev": "tslint src/*.ts && concurrently \"webpack --watch\" \"lite-server -c bs-config.js\""
+    "dev": "tslint src/*.ts && concurrently \"webpack --watch\" \"lite-server -c bs-config.js\"",
+    "build": "webpack"
   },
   "repository": {
     "url": "git@github.com:rolodato/volca-keys-editor.git",
