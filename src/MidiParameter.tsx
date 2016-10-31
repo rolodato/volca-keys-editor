@@ -35,7 +35,7 @@ export class MidiParameter extends React.Component<Props, State> {
         this.setValue(event.target.value);
     }
 
-    public setValue(value) {
+    public setValue(value: number) {
         this.setState({
             value: value,
             midi: this.state.midi

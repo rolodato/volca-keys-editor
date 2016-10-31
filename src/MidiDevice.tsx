@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Parameter } from "./Parameter";
 import { MidiParameter } from "./MidiParameter";
+import { Patch } from "./Patch";
 
 interface Props {
     midi: WebMidi.MIDIAccess;
@@ -70,6 +71,7 @@ export class MidiDevice extends React.Component<Props, State> {
                         ref={(param) => { this.midiParams.push(param); } }
                         />;
                 })}
+                <Patch parameters={this.midiParams} />
             </div>
         );
     }
@@ -78,6 +80,7 @@ export class MidiDevice extends React.Component<Props, State> {
         if (this.state.midiOut) {
             this.state.midiOut.send(param.toMidiBytes(this.state.channel));
         }
+        this.forceUpdate();
     }
 
     public initialize(): void {

@@ -2,13 +2,14 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MidiDevice } from "./MidiDevice";
 import { Parameter } from "./Parameter";
+import { Patch } from "./Patch";
 
 if (!navigator.requestMIDIAccess) {
   onMIDIFailure();
 } else {
   navigator.requestMIDIAccess()
     .then(midi => {
-      const parameters = [{
+      const originalParameters = [{
         name: "Voice",
         cc: 40,
         range: 7,
@@ -84,6 +85,16 @@ if (!navigator.requestMIDIAccess) {
         range: 127,
         initialValue: 0,
       }];
+      let parameters;
+      if (window.location.hash) {
+        try {
+          parameters = Patch.fromString(window.location.hash.replace("#", ""), originalParameters);
+        } catch (e) {
+          parameters = originalParameters;
+        }
+      } else {
+        parameters = originalParameters;
+      }
       ReactDOM.render(<MidiDevice midi={midi} parameters={parameters} />, document.getElementById("root"));
     }).catch(onMIDIFailure);
 }
