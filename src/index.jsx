@@ -1,7 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { MidiDevice } from "./MidiDevice";
-import { Parameter } from "./Parameter";
 import { Patch } from "./Patch";
 
 if (!navigator.requestMIDIAccess) {
@@ -99,7 +98,7 @@ if (!navigator.requestMIDIAccess) {
     }).catch(onMIDIFailure);
 }
 
-function onMIDIFailure(e?) {
+function onMIDIFailure(e) {
   alert("Your browser does not support Web MIDI. Please use the latest version of Google Chrome.");
   console.error(e);
 }

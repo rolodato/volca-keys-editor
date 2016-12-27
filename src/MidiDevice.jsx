@@ -1,23 +1,12 @@
 import * as React from "react";
-import { Parameter } from "./Parameter";
 import { MidiParameter } from "./MidiParameter";
 import { Patch } from "./Patch";
 
-interface Props {
-    midi: WebMidi.MIDIAccess;
-    parameters: Parameter[];
-}
+export class MidiDevice extends React.Component {
 
-interface State {
-    midiOut: WebMidi.MIDIOutput;
-    channel: number;
-}
-
-export class MidiDevice extends React.Component<Props, State> {
-    midiParams: MidiParameter[] = [];
-
-    constructor(props: Props) {
+    constructor(props) {
         super(props);
+        this.midiParams = [];
         this.state = {
             midiOut: props.midi.outputs.values().next().value,
             channel: 1
@@ -76,14 +65,14 @@ export class MidiDevice extends React.Component<Props, State> {
         );
     }
 
-    public parameterChanged(param: MidiParameter): void {
+    parameterChanged(param) {
         if (this.state.midiOut) {
             this.state.midiOut.send(param.toMidiBytes(this.state.channel));
         }
         this.forceUpdate();
     }
 
-    public initialize(): void {
+    initialize() {
         this.midiParams.forEach(param => param.initialize());
     }
 }

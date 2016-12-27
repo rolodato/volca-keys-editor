@@ -1,19 +1,8 @@
 import * as React from "react";
 import { MidiDevice } from "./MidiDevice";
-import { Parameter } from "./Parameter";
 
-export interface Props {
-    parameter: Parameter;
-    midi: MidiDevice;
-}
-
-interface State {
-    value?: number;
-    midi: MidiDevice;
-}
-
-export class MidiParameter extends React.Component<Props, State> {
-    constructor(props: Props) {
+export class MidiParameter extends React.Component {
+    constructor(props) {
         super(props);
         this.state = {
             value: props.parameter.initialValue,
@@ -23,11 +12,11 @@ export class MidiParameter extends React.Component<Props, State> {
         this.setValue = this.setValue.bind(this);
     }
 
-    public initialize(): void {
+    initialize() {
         this.setValue(this.props.parameter.initialValue);
     }
 
-    public toMidiBytes(channel: number): number[] {
+    toMidiBytes(channel) {
         return [0xb0 + channel - 1, this.props.parameter.cc, this.state.value];
     }
 
@@ -35,7 +24,7 @@ export class MidiParameter extends React.Component<Props, State> {
         this.setValue(event.target.value);
     }
 
-    public setValue(value: number) {
+    setValue(value) {
         this.setState({
             value: value,
             midi: this.state.midi

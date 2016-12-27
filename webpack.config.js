@@ -1,14 +1,19 @@
 module.exports = {
-	entry: './src/index.tsx',
-	output: {
-		filename: 'dist/bundle.js'
-	},
-	resolve: {
-		extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js']
-	},
-	module: {
-		loaders: [
-			{ test: /\.tsx?$/, loader: 'ts-loader' }
-		]
-	}
+    entry: './src/index.jsx',
+    output: {
+        filename: 'dist/bundle.js'
+    },
+    module: {
+        loaders: [{
+            test: /\.jsx?$/,
+            exclude: /node_modules/,
+            loader: 'babel-loader',
+            query: {
+                presets: ['react', 'es2015']
+            }
+        }]
+    },
+    resolve: {
+        extensions: ['', '.js', '.jsx']
+    }
 };
