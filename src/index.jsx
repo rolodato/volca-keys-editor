@@ -98,7 +98,6 @@ if (!navigator.requestMIDIAccess) {
     }).catch(onMIDIFailure);
 }
 
-function onMIDIFailure(e) {
+function onMIDIFailure() {
   alert("Your browser does not support Web MIDI. Please use the latest version of Google Chrome.");
-  console.error(e);
 }
