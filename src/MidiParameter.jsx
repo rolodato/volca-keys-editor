@@ -21,7 +21,7 @@ export class MidiParameter extends React.Component {
     }
 
     handleChange(event) {
-        this.setValue(event.target.value);
+        this.setValue(Number.parseInt(event.target.value));
     }
 
     setValue(value) {
@@ -36,7 +36,7 @@ export class MidiParameter extends React.Component {
             <div>
                 <label>{this.props.parameter.name}</label>
                 <input type="range"
-                    max="127"
+                    max={127}
                     value={this.state.value}
                     step={Math.ceil(127 / this.props.parameter.range)}
                     onChange={this.handleChange} />

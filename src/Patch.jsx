@@ -29,7 +29,7 @@ export class Patch extends React.Component {
             return "";
         }
     }
-    fromString(str, originalParams) {
+    static fromString(str, originalParams) {
         const compactParameters = JSON.parse(b64decode(str));
         Object.keys(compactParameters).forEach(p => {
             const paramToSet = originalParams.find(original => original.cc === Number.parseInt(p));
