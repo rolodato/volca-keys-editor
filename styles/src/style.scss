@@ -1,0 +1,25 @@
+@import "../../node_modules/normalize.css/normalize.css";
+
+body {
+  font-size: 16px;
+  padding: 2rem;
+}
+
+input,
+button,
+select {
+  margin: 0.25rem;
+}
+
+.midi-parameter {
+  label {
+    display: inline-block;
+    margin-right: 0.5rem;
+    text-align: right;
+    width: 10rem;
+  }
+}
+
+.volcakeys {
+  margin: 2rem 0;
+}
