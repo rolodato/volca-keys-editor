@@ -34,12 +34,12 @@ export class MidiParameter extends React.Component {
     render() {
         return (
             <div className="midi-parameter">
-                <label>{this.props.parameter.name}</label>
                 <input type="range"
                     max={127}
                     value={this.state.value}
                     step={Math.ceil(127 / this.props.parameter.range)}
                     onChange={this.handleChange} />
+                <label>{this.props.parameter.name}</label>
             </div>
         );
     }

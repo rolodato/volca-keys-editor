@@ -11,15 +11,4 @@ select {
   margin: 0.25rem;
 }
 
-.midi-parameter {
-  label {
-    display: inline-block;
-    margin-right: 0.5rem;
-    text-align: right;
-    width: 10rem;
-  }
-}
-
-.volcakeys {
-  margin: 2rem 0;
-}
+@import "./volca-keys";

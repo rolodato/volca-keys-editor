@@ -55,6 +55,7 @@ export class MidiDevice extends React.Component {
                 </select>
               </div>
               <div className="volcakeys">
+                <div className="volcakeys__top-panel">
                 {this.props.parameters.map(p => {
                     return <MidiParameter
                         parameter={p}
@@ -63,6 +64,7 @@ export class MidiDevice extends React.Component {
                         ref={(param) => { this.midiParams.push(param); } }
                         />;
                 })}
+                </div>
               </div>
                 <Patch parameters={this.midiParams} />
             </div>
