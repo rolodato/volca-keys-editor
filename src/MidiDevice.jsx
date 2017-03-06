@@ -43,29 +43,29 @@ export class MidiDevice extends React.Component {
 
         return (
             <div className="midi-device">
-              <div className="midi-device__controls">
-                <button onClick={this.initialize}>Initialize</button>
-                <select name="channel" onChange={this.changeChannel}>
-                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16].map(c => {
-                        return <option value={c} key={c}>Channel {c}</option>;
-                    })}
-                </select>
-                <select name="device" onChange={this.changeDevice}>
-                    {deviceOptions.length > 0 ? deviceOptions : <option>No MIDI output devices</option>}
-                </select>
-              </div>
-              <div className="volcakeys">
-                <div className="volcakeys__top-panel">
-                {this.props.parameters.map(p => {
-                    return <MidiParameter
-                        parameter={p}
-                        midi={this}
-                        key={p.cc}
-                        ref={(param) => { this.midiParams.push(param); } }
-                        />;
-                })}
+                <div className="midi-device__controls">
+                    <button onClick={this.initialize}>Initialize</button>
+                    <select name="channel" onChange={this.changeChannel}>
+                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16].map(c => {
+                            return <option value={c} key={c}>Channel {c}</option>;
+                        })}
+                    </select>
+                    <select name="device" onChange={this.changeDevice}>
+                        {deviceOptions.length > 0 ? deviceOptions : <option>No MIDI output devices</option>}
+                    </select>
                 </div>
-              </div>
+                <div className="volcakeys">
+                    <div className="volcakeys__top-panel">
+                        {this.props.parameters.map(p => {
+                            return <MidiParameter
+                                parameter={p}
+                                midi={this}
+                                key={p.cc}
+                                ref={(param) => { this.midiParams.push(param); } }
+                            />;
+                        })}
+                    </div>
+                </div>
                 <Patch parameters={this.midiParams} />
             </div>
         );

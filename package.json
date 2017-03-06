@@ -7,8 +7,8 @@
     "dev": "./node_modules/eslint/bin/eslint.js . && concurrently \"webpack --watch\" \"lite-server -c bs-config.js\"",
     "build": "webpack",
     "lint": "./node_modules/eslint/bin/eslint.js .",
-    "watchCss": "./node_modules/node-sass/bin/node-sass styles/src/*.scss styles/dist/style.css -w",
-    "buildCss": "./node_modules/node-sass/bin/node-sass styles/src/*.scss styles/dist/style.css"
+    "watchCss": "./node_modules/node-sass/bin/node-sass styles/src/style.scss styles/dist/style.css -w",
+    "buildCss": "./node_modules/node-sass/bin/node-sass styles/src/style.scss styles/dist/style.css"
   },
   "repository": {
     "url": "git@github.com:rolodato/volca-keys-editor.git",

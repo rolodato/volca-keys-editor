@@ -1,25 +1,25 @@
 @import "../../node_modules/normalize.css/normalize.css";
 
 body {
-  font-size: 16px;
-  padding: 2rem;
+    font-size: 16px;
+    padding: 2rem;
 }
 
 input,
 button,
 select {
-  margin: 0.25rem;
+    margin: 0.25rem;
 }
 
 .volca-kontrol {
-  margin: 0 auto;
-  padding: 1rem;
-  text-align: center;
-  label {
-    display: block;
-    font-variant: small-caps;
-  }
-  > div {
-  }
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+    label {
+        display: block;
+        font-variant: small-caps;
+    }
+    > div {
+    }
 }
 @import "./volca-keys";
