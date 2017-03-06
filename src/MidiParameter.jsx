@@ -22,7 +22,7 @@ export class MidiParameter extends React.Component {
     }
 
     handleChange(newValue) {
-        this.setState({value: newValue});
+        this.setValue(Number.parseInt(newValue));
     }
 
     setValue(value) {
