@@ -31,6 +31,7 @@
   "dependencies": {
     "normalize.css": "^5.0.0",
     "react": "^15.3.2",
+    "react-canvas-knob": "^0.3.0",
     "react-dom": "^15.3.2"
   }
 }

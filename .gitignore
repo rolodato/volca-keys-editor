@@ -39,3 +39,5 @@ jspm_packages
 dist
 typings
 *.swp
+.DS_Store
+
