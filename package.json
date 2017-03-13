@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "./node_modules/eslint/bin/eslint.js . && concurrently \"webpack --watch\" \"lite-server -c bs-config.js\"",
     "build": "webpack",
-    "lint": "./node_modules/eslint/bin/eslint.js ."
+    "lint": "./node_modules/eslint/bin/eslint.js .",
+    "watchCss": "./node_modules/node-sass/bin/node-sass styles/src/style.scss styles/dist/style.css -w",
+    "buildCss": "./node_modules/node-sass/bin/node-sass styles/src/style.scss styles/dist/style.css"
   },
   "repository": {
     "url": "git@github.com:rolodato/volca-keys-editor.git",
@@ -23,10 +25,13 @@
     "eslint": "^3.12.2",
     "eslint-plugin-react": "^6.8.0",
     "lite-server": "^2.2.2",
+    "node-sass": "^4.3.0",
     "webpack": "^1.13.3"
   },
   "dependencies": {
+    "normalize.css": "^5.0.0",
     "react": "^15.3.2",
+    "react-canvas-knob": "^0.3.0",
     "react-dom": "^15.3.2"
   }
 }

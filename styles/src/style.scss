@@ -1,0 +1,56 @@
+@import "../../node_modules/normalize.css/normalize.css";
+
+$bg-colour: #343132;
+$fg-colour: #baa596;
+body {
+    background: $bg-colour;
+    color: #fff;
+    font-size: 16px;
+    padding: 2rem;
+}
+
+a {
+    color: $fg-colour;
+}
+
+input,
+button,
+select {
+    margin: 0.25rem;
+}
+
+.midi-device__controls {
+    text-align: center;
+    opacity: 0.7;
+    transition: opacity .5s ease-in-out;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.volca-kontrol {
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+    label {
+        color: $bg-colour;
+        display: block;
+        font-variant: small-caps;
+    }
+    > div {
+    }
+}
+
+.volcakeys {
+    background: $bg-colour;
+    border: 0.75rem solid $bg-colour;
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+
+    &__top-panel {
+        background: $fg-colour;
+        border-radius: 0.25rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
